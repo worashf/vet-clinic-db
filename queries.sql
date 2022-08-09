@@ -6,8 +6,7 @@ SELECT name FROM animals WHERE date_of_birth BETWEEN '01-01-2016' AND '01-01-201
 SELECT name FROM animals WHERE neutered =true  AND  escape_attempts <3;
 
 SELECT date_of_birth
-FROM animals
-WHERE  name="Agumon" OR name="Pikachu"
+FROM animals WHERE name ='Agumon' OR name ='Pikachu';
 
 SELECT name, escape_attempts from animals WHERE weight_kg >10.5
 
