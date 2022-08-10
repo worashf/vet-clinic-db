@@ -62,4 +62,18 @@ SELECT name, weight_kg FROM animals;
  FROM animals;  --check the chande made
  COMMIT;
 /*  */
+
+/* aggreigate */
+ -- how many animals are there
+ SELECT COUNT(*) from animals;
+ -- count animals never tried to escape
+  SELECT COUNT(*) from animals WHERE escape_attempts =0;
+ -- calculate the average weght of all animals
+  SELECT AVG(weight_kg) from animals;
+  --  find the max escape attemps ,neutered or not neutered animals?
+  SELECT neutered, 
+ MAX(escape_attempts)  AS max_escap_attempts
+FROM animals 
+GROUP BY neutered;
+
 /** Transaction, grouping and agregate end */
