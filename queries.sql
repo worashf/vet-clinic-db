@@ -76,4 +76,11 @@ SELECT name, weight_kg FROM animals;
 FROM animals 
 GROUP BY neutered;
 
+-- find the max weight of animals
+SELECT MAX(weight_kg) FROM animals;
+--find the min weight of animals
+SELECT MIN(weight_kg) FROM animals;
+-- acalculate the average escap attemps of animals born between 1990 and 2000
+SELECT AVG(escape_attempts) FROM animals WHERE
+date_of_birth BETWEEN '01/01/1990' AND '01/01/2000'
 /** Transaction, grouping and agregate end */
