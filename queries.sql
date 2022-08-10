@@ -55,5 +55,11 @@ UPDATE animals SET weight_kg =weight_kg * -1;
 SELECT name, weight_kg FROM animals;
  ROLLBACK TO sp1;
  SELECT name, weight_kg FROM animals; -- check after rollback
+
+  UPDATE animals SET weight_kg =weight_kg * -1
+ WHERE weight_kg < 0;
+ SELECT name, weight_kg 
+ FROM animals;  --check the chande made
+ COMMIT;
 /*  */
 /** Transaction, grouping and agregate end */
