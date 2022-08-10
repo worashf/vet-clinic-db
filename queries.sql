@@ -14,3 +14,17 @@ SELECT * FROM animals WHERE neutered =true;
 
 SELECT * FROM animals WHERE name <> 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
+
+
+/** Transaction, grouping and agregate start */
+
+BEGIN;
+UPDATE animals SET species ='unspecified';  --made update on species column
+SELECT species FROM animals; --verify update made
+ROLLBACK;
+SELECT species FROM animals; --verify update made undone
+
+
+
+
+/** Transaction, grouping and agregate end */
