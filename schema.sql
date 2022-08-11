@@ -19,3 +19,6 @@ CREATE TABLE owners (id INT GENERATED ALWAYS AS IDENTITY,
 					)
 
 
+/** create species table */
+CREATE TABLE species (id INT GENERATED ALWAYS AS IDENTITY,
+					 name VARCHAR(45), CONSTRAINT pk_species PRIMARY KEY(id))
