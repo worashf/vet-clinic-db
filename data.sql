@@ -60,5 +60,20 @@ INSERT INTO species (name) VALUES (' Pokemon'),('  Digimon');
  UPDATE animals SET species_id  =1
  WHERE species_id IS NULL;
 
+ /** update animals add owners information **/
+  /** Sam Smith own Agumon */
+
+UPDATE animals SET owner_id = 1 WHERE name = 'Agumon'; --  Sam Smith id is 1
+/**Jennifer Orwell owns Gabumon and Pikachu. */
+UPDATE animals SET owner_id = 2 WHERE name = 'Gabumon' OR name = 'Pikachu';
+/** Bob owns Devimon and Plantmon. */
+UPDATE animals SET owner_id = 3 WHERE name = 'Devimon'OR name = 'Plantmon'
+
+/** Melody Pond owns Charmander, Squirtle, and Blossom. */
+UPDATE animals SET owner_id = 4 WHERE name = 'Charmander' 
+OR name = 'Squirtle' OR name = 'Blossom';
+/** Dean Winchester owns Angemon and Boarmon.*/
+UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
+
 
 /* ###  query multiple table project end */
