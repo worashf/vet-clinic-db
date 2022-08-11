@@ -50,9 +50,15 @@ INSERT INTO owners (full_name, age) VALUES ('Sam Smith',34),('Jennifer Orwell',1
 ('Bob', 45),('Melody Pond',77),('Dean Winchester',14),('Jodie Whittaker',38);
 
 
+/** insert data of species */
+INSERT INTO species (name) VALUES (' Pokemon'),('  Digimon');
 
+/** updtae animals table species column   set it to 2 where animals name end with mon */
 
-
+ UPDATE animals SET species_id =2 WHERE name LIKE '%mon';
+/** updtae animals table species column   set it to 1 where animals species id equal null */
+ UPDATE animals SET species_id  =1
+ WHERE species_id IS NULL;
 
 
 /* ###  query multiple table project end */
