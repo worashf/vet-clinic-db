@@ -39,3 +39,20 @@ INSERT INTO animals (name,date_of_birth,weight_kg,escape_attempts,neutered) VALU
 INSERT INTO animals (name,date_of_birth,weight_kg,escape_attempts,neutered) VALUES 
 ('Ditto', '14-05-2022', 22, 4, true);
 /** end  */
+
+
+
+/* ###   query multiple table project*/
+
+
+/** insert data  of owners*/
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith',34),('Jennifer Orwell',19),
+('Bob', 45),('Melody Pond',77),('Dean Winchester',14),('Jodie Whittaker',38);
+
+
+
+
+
+
+
+/* ###  query multiple table project end */
