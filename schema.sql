@@ -36,3 +36,11 @@ ADD CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id);
 /** add owner_id foreign key */
 ALTER TABLE animals ADD owner_id INT, 
 ADD CONSTRAINT fk_owners FOREIGN KEY(owner_id) REFERENCES owners(id);
+
+/** many to mnay relationship implementation */
+ CREATE TABLE vets (
+      id INT GENERATED ALWAYS AS IDENTITY,
+ 	  name VARCHAR(255),
+	  date_of_graduation DATE,
+	  CONSTRAINT pk_vets PRIMARY KEY(id)
+  )
