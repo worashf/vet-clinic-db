@@ -77,3 +77,23 @@ UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
 
 
 /* ###  query multiple table project end */
+
+/** ## Many to many relationship start */
+
+
+/* -- insert vets data */
+INSERT INTO vets(name,age,date_of_graduation) VALUES('William Tatcher',45,'23-04-2000'),
+('Maisy Smith',26,'17-01-2019'),
+('Stephanie Mendez',64,'04-05-1981'),('Jack Harkness',38,'08-06-2008');
+
+ /* -- iinsert specialization data */
+ INSERT INTO specializations(vet_id,species_id)
+VALUES (1,1),(3,1),(3,2),(4,2);
+
+/** -- Insert visits data --*/
+ INSERT INTO visits(animal_id,vet_id,date_of_visit)
+ VALUES (1,1,'2020-05-24'),(1,3,'2020-07-22'),(2,4,'2021-02-02'),(5,2,'2020-01-05')
+ ,(5,2,'2020-03-08'),(5,2,'2020-05-14'),(3,3,'2021-05-04'),(8,4,'2021-02-24'),
+ (10,2,'2019-12-21'),(10,1,'2020-08-10'),(10,2,'2021-04-07'),(9,3,'2019-09-29'),
+ (7,4,'2020-10-03'),(7,4,'2020-11-04'),(4,2,'2019-01-24'),(4,2,'2019-05-15'),
+ (4,2,'2020-02-27'),(4,2,'2020-08-03'),(6,3,'2020-05-24'),(6,1,'2021-01-11')
