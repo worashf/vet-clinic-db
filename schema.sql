@@ -42,6 +42,7 @@ ADD CONSTRAINT fk_owners FOREIGN KEY(owner_id) REFERENCES owners(id);
  CREATE TABLE vets (
       id INT GENERATED ALWAYS AS IDENTITY,
  	  name VARCHAR(255),
+	  age INT,
 	  date_of_graduation DATE,
 	  CONSTRAINT pk_vets PRIMARY KEY(id)
   )
