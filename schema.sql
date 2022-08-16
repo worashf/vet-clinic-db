@@ -65,3 +65,8 @@ CONSTRAINT fk_vets FOREIGN KEY(vet_id) REFERENCES vets(id));
 /* ALter table owners */
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 	
+
+	/* create  index to minimaze performance issue */
+	CREATE INDEX  visit_animal_id_index  ON visits(animal_id);
+	CREATE INDEX visit_vet_id_index ON visits(vet_id)
+	CREATE INDEX owner_email_index ON owners(email)
