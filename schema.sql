@@ -60,4 +60,8 @@ animal_id INT, vet_id INT,
 date_of_visit DATE,
 CONSTRAINT fk_animals FOREIGN KEY(animal_id) REFERENCES animals(id),
 CONSTRAINT fk_vets FOREIGN KEY(vet_id) REFERENCES vets(id));
+
+
+/* ALter table owners */
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 	
