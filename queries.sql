@@ -190,3 +190,11 @@ SELECT COUNT(date_of_visit) FROM vets LEFT JOIN visits V ON V.vet_id = vets.id L
   SELECT  vet.name AS vet_name, s.name as speciality,COUNT(date_of_visit) count  FROM visits visit JOIN animals a ON 
 visit.animal_id = a.id JOIN species s ON a.species_id = s.id 
 JOIN vets vet ON visit.vet_id = vet.id WHERE vet.name = 'Maisy Smith' GROUP BY vet.name,s.name;
+
+
+/* Analize before Add index */
+
+   EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+   EXPLAIN ANALYZE   SELECT COUNT(*) FROM visits where vet_id = 2;
+   EXPLAIN ANALYZE  SELECT COUNT(*) FROM owners where email = 'owner_18327@mail.com';
+
